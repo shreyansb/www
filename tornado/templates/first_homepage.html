@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>srb.ag</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/srbag.css" />
+	<script src="/static/js/closure-library/closure/goog/base.js"></script>
+	<script src="/static/js/srbag.js"></script>
+</head>
+
+<script type='text/javascript'> 
+	// This and the next blocks of js are for mixpanel.com tracking
+	//var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); 
+	//document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); 
+</script> 
+<script type='text/javascript'> 
+	try {  
+		var mpmetrics = new MixpanelLib('c1b0c43ad11090dcb4d7cc0d2793d74e'); 
+	} catch(err) { 
+		null_fn = function () {}; 
+		var mpmetrics = {  
+			track: null_fn,  
+			track_funnel: null_fn,  
+			register: null_fn,  
+			register_once: null_fn, 
+			register_funnel: null_fn 
+		}; 
+	}
+</script>
+
+<body bgcolor="black" text="white">
+	<script type="text/javascript" charset="utf-8">
+	    srbag.listen(window, 'load', srbag.load.window);
+	</script>
+	<div style="padding-top:20px" class="align_center align_top_white imghover">
+	    <img id="srbag_without_initials" class="opacity30 imghover" style="width:75px;height:auto;" 
+	    src="/static/images/srbag-white-300x300.png"
+	        onmouseover="this.style.display='none'; var el=document.getElementById('srbag_with_initials'); el.style.display='';"
+	    />
+	    <img id="srbag_with_initials" class="opacity30 imghover" style="width:75px;height:auto;display:none" 
+	    src="/static/images/srbag-white-with-initials-300x300.png"
+	        onmouseout="this.style.display='none'; var el=document.getElementById('srbag_without_initials'); el.style.display='';"
+	    />
+	</div>
+	<div style="padding-top:20px" class="align_center align_top white">
+		<div id="sb_container" style="padding-right:5px;" class="imghover align_top inline">
+			<a id="sb_link" class="white_link" href="{{sb_latest_lightbox_url}}">
+					<img id="sb_img" class="rounded_corner opacity40" src="{{sb_image}}" style="border:none;height:300px"/><br/>
+					<div class="opacity30 p_five_t">sb</div>
+			</a>
+			<a href="http://shreyans.bhansa.li" class="alink"><div class="link imghover">5|2|3</div></a>
+			<a href="http://shreyans.bhansa.li" class="alink"><div class="link imghover">5|2|3</div></a>
+			<a href="/flappy" class="alink"><div class="link imghover">flappy</div></a>
+			<a href="https://venmo.com?invite_code=shreyans-6&nr=1" class="alink"><div class="link imghover">venmo</div></a>
+			<a href="{{sb_time_link}}" target="_blank" class="alink"><div class="link imghover">{{est}}<span id="srbag_show_time_est"></span></div></a>
+		</div>
+		<div id="ag_container" class="imghover inline align_top">
+			<a id="ag_link" class="white_link" href="{{ag_latest_lightbox_url}}">
+					<img id="ag_img" class="rounded_corner imghover opacity40" src="{{ag_image}}" style="border:none;height:300px"/><br/>
+					<div class="opacity30 p_five_t">ag</div>
+			</a>
+			<div class="imghover"><a href="/pod" class="alink"><div class="link">pod</div></a></div>
+			<div class="imghover"><a href="http://dthink.srb.ag/" class="alink"><div class="link">d.think</div></div>
+			<div class="imghover"><a href="/yoga" class="alink"><div class="link imghover">yoga</div></a></div>
+			<div class="imghover"><a href="http://splitmyri.de" class="alink"><div class="link imghover">splitmyri.de</div></a></div>
+			<div class="imghover"><a href="{{ag_time_link}}" target="_blank" class="alink"><div class="link imghover">{{pst}}<span id="srbag_show_time_pst"></span></div></a></div>
+		</div>
+	</div>
+	<div style="padding-top:20px" class="align_center align_top_white imghover">
+	    <a href="http://details.srb.ag" target="_blank" class="alink"><div class="link imghover">details</div></a>
+	</div>
+</body>
+</html>

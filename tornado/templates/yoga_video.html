@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>video {{video_number}} - asha's yoga videos</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/srbag.css" />
+    <script src="/static/js/flowplayer-3.2.6.min.js"></script>
+</head>
+
+<body bgcolor="black" text="white">
+    <div class="imghover"><a href="/yoga" class="alink"><div class="link imghover">&larr;yoga</div></a></div>
+    <div id="player_container" 
+        style="padding-top:15px; 
+                height:{{height}}px; width:{{width}}px; 
+                margin: 0px auto;">
+        <div id="player"></div>
+    </div>
+    <script type='text/javascript'>
+        flowplayer(
+            "player", 
+            "{{flash_player_path}}", 
+            "{{video_url}}"
+        );
+    </script>
+</body>
+</html>

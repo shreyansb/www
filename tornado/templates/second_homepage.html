@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>srb.ag</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/srbag.css" />
+	<script src="/static/js/closure-library/closure/goog/base.js"></script>
+	<script src="/static/js/srbag.js"></script>
+</head>
+<body bgcolor="black" text="white">
+	<script type="text/javascript" charset="utf-8">
+	    goog.events.listen(window, 'load', srbag.load.window);
+	</script>
+	<div style="padding-top:80;text-align:center">
+		<div class="imghover inline">
+			<a id="sb_link" class="white_link" href="{{sb_latest_lightbox_url}}">
+				<img id="sb_img" class="rounded_corner opacity40" 
+				src="{{sb_image}}" style="border:none;height:300px"/><br/>
+				sb
+			</a>
+		</div>
+		<div class="imghover inline">
+			<a id="ag_link" class="white_link" href="{{ag_latest_lightbox_url}}">
+				<img id="ag_img" class="rounded_corner opacity40" 
+				src="{{ag_image}}" style="border:none;height:300px"/><br/>
+				ag
+			</a>
+		</div>
+	</div>
+</body>
+</html>
