@@ -68,6 +68,8 @@ class RedirectHandler(tornado.web.RequestHandler):
             self.redirect('http://srb.ag/static/files/flickr_keyboard_shortcuts_v0_2_9.crx')
         elif re.match('^/venmolive$', uri):
             self.redirect('http://107.20.240.170/')
+        elif re.match('^/teamvenmo$', uri):
+            self.redirect('http://dl.dropbox.com/u/1654579/Venmo/venmoteam.gif')
         else:
             self.redirect('http://srb.ag')
 
